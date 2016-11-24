@@ -128,22 +128,22 @@
       <version>1.10</version>
     </dependency>
   </dependencies>
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-framework-bom</artifactId>
-        <version>${spring.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>net.sf.ehcache</groupId>
-        <artifactId>ehcache-core</artifactId>
-        <version>2.6.9</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+  <!--<dependencyManagement>-->
+    <!--<dependencies>-->
+      <!--<dependency>-->
+        <!--<groupId>org.springframework</groupId>-->
+        <!--<artifactId>spring-framework-bom</artifactId>-->
+        <!--<version>${spring.version}</version>-->
+        <!--<type>pom</type>-->
+        <!--<scope>import</scope>-->
+      <!--</dependency>-->
+      <!--<dependency>-->
+        <!--<groupId>net.sf.ehcache</groupId>-->
+        <!--<artifactId>ehcache-core</artifactId>-->
+        <!--<version>2.6.9</version>-->
+      <!--</dependency>-->
+    <!--</dependencies>-->
+  <!--</dependencyManagement>-->
   <build>
     <finalName>mongo</finalName>
     <plugins>
@@ -151,10 +151,23 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.7</source>
+          <target>1.7</target>
         </configuration>
       </plugin>
     </plugins>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>java-releases</id>
+      <name>ND java releases nexus mirror.</name>
+      <url>http://nexus.sdp.nd/nexus/content/repositories/java/</url>
+    </repository>
+    <snapshotRepository>
+      <id>java-snapshots</id>
+      <name>ND java snapshots nexus mirror.</name>
+      <url>http://nexus.sdp.nd/nexus/content/repositories/java_snapshot/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
