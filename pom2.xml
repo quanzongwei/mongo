@@ -12,7 +12,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
     <!--日志-->
@@ -66,14 +66,17 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
+      <version>4.1.7.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
+      <version>4.1.7.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
+      <version>4.1.7.RELEASE</version>
     </dependency>
     <!--spring dao-->
       <dependency>
@@ -89,20 +92,24 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-tx</artifactId>
+      <version>4.1.7.RELEASE</version>
     </dependency>
     <!--spring web-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
+      <version>4.1.7.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
+      <version>4.1.7.RELEASE</version>
     </dependency>
     <!--spring test-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
+      <version>4.1.7.RELEASE</version>
     </dependency>
 
     <dependency>
@@ -137,17 +144,6 @@
       <!--</dependency>-->
     <!--</dependencies>-->
   <!--</dependencyManagement>-->
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-framework-bom</artifactId>
-        <version>4.3.1.RELEASE</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
   <build>
     <finalName>mongo</finalName>
     <plugins>

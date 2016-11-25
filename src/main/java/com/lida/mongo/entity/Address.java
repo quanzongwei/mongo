@@ -1,7 +1,5 @@
 package com.lida.mongo.entity;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
 /**
  * Created by DuLida on 2016/10/20.
  */
@@ -50,6 +48,6 @@ public class Address {
                 "city='" + city + '\'' +
                 ", street='" + street + '\'' +
                 ", num=" + num +
-                '}';
+                '}'+"\n";
     }
 }
