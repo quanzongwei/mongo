@@ -10,6 +10,7 @@ import java.io.Serializable;
  * Created by DuLida on 2016/10/20.
  */
 @Document(collection="person")
+//@Document(collection="#{ @orgProvider.getOrg()}_datadic") 可以使用已经注入的对象的方法,orgProvider是注入到spring的对象
 public class Person implements Serializable {
 
     @Id
