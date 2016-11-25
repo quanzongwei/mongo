@@ -1,6 +1,8 @@
 package com.lida.mongo.controller;
 
 import com.lida.mongo.dao.PersonDao;
+import com.lida.mongo.entity.Person;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -55,7 +57,8 @@ public class MongoController {
     @RequestMapping(value = "/page", method = RequestMethod.GET)
     public String go6() {
 //        System.out.println(personDao.findByName("name0"));
-       System.out.println(personDao.findByName("name0", new PageRequest(0, 10, Sort.Direction.ASC,"_id")));
+       System.out.println(personDao.findByName("name0", new PageRequest(0, 10, Sort.Direction.ASC, "_id")));
+
         return "mogoList";
     }
 
@@ -64,6 +67,12 @@ public class MongoController {
 //        System.out.println(personDao.findByName("name0"));
        System.out.println(personDao.deleteByName("name9"));
        System.out.println(personDao.deletePersonByName("name8"));
+
+        //更新操作成功,保存就是更新了
+        Person person = personDao.findOne(new ObjectId("5836dc7b793a34373068ff9c"));
+        System.out.println(person);
+        person.setAge(100);
+        System.out.println(personDao.save(person));
 
         return "mogoList";
     }
